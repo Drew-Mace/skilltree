@@ -76,273 +76,148 @@
 	skills: [
 		{
 			id: 1
-			, title: 'HTML'
-			, description: 'The main language for creating web pages, HTML is written in the form of tags enclosed in angle brackets (like &lt;html&gt;).'
+			, title: 'Marksmen' // markmen 1
+			, description: 'Lethal with a wide array of weapon systems.'
 			, rankDescriptions: [
-				'You understand how to create and view a basic web page.'
-				, 'You understand how to link pages together, design multi-column layouts, and work with form fields and media elements.'
+				'Riflemans Pack, Medium armor training'
 			]
-            , links: [
-                {
-                    label: 'HTML.net Tutorials'
-                    , url: 'http://www.html.net/tutorials/html/'
-                }
-                , {
-                    label: 'Sublime Text 3, a great code editor'
-	                , url: 'http://www.sublimetext.com/'
-                }
-            ]
-			, maxPoints: 2
+            , 
+			 maxPoints: 1
 			, stats: [
 				{
-					title: 'Intellect'
-					, value: 1
+					title: 'Pistol'
+					, value: 2
 				}
 				,{
-					title: 'Charisma'
-					, value: 1
+					title: 'Rifle'
+					, value: 2
 				}
 				,{
-					title: 'Strength'
-					, value: 1
+					title: 'SMG'
+					, value: 2
+				}
+				,{
+					title: 'DMR'
+					, value: 2
 				}
 			]
 		},
 
 		{
 			id: 2
-			, title: 'CSS'
-			, dependsOn: [1]
-            , links: [
-                {
-                    label: 'CSS Tutorials'
-	                , url: 'http://www.htmldog.com/guides/css/'
-                }
-                , {
-                    label: 'Can I use... (browser support)'
-                    , url: 'http://caniuse.com/#cats=CSS'
-                }
-            ]
-			, maxPoints: 2
+			, title: 'Stalker' // stalker 2
+			, dependsOn: [1]             
+			, maxPoints: 1
 			, stats: [
 				{
-					title: 'Charisma'
-					, value: 3
+					title: 'Stealth - 1d6 dmg when leaving stealth.'
+					, value: 2
+				}
+				,{
+					title: 'Side arm'
+					, value: 1
+				}
+				,{
+					title: 'Melee bladed'
+					, value: 2/2
 				}
 			]
             , rankDescriptions: [
-                'You are familiar with the basics of CSS formatting and the box model.'
-                , 'You are familiar with media queries and responsive design for adapting your design to fit different devices.'
+                'Stalkers pack\n+3 Evasion while in light armor'                
             ]
-            , description: 'Cascading Style Sheets (CSS) is a language for styling web pages.  CSS rules target elements in the HTML document to specify the presentation, such as font, color, spacing, and size.'
-			, talents: ['Stylish']
+            , description: 'The reason they fear the darkness'
 		},
 		{
 			id: 3
-			, title: 'CSS Tools'
-			, dependsOn: [2]
-            , links: [
-                {
-                    label: 'Sass vs. LESS'
-	                , url: 'http://css-tricks.com/sass-vs-less/'
-                }
-                , {
-                    label: 'LESS'
-                    , url: 'http://lesscss.org/'
-                }
-                , {
-                    label: 'Sass'
-                    , url: 'http://sass-lang.com/'
-                }
-                , {
-                    label: 'Stylus'
-                    , url: 'http://learnboost.github.io/stylus/'
-                }
-            ]
-			, maxPoints: 2
+			, title: 'LMG Specialist' // LMG 3
+			, dependsOn: [1]
+			, maxPoints: 7
             , rankDescriptions: [
-                'You are familiar with variables and nesting.'
-                , 'You can use advanced tools like mix-ins and sometimes write your own.'
+                '+1 with LMG on cover or prone'
+				, '2 shots per turn'
+				, '+1/1 with LMG on cover or prone'
+				, '3 shots per turn'
+				, '+1/1 with LMG on cover or prone'
+				, '4 shots per turn'
+				, '+1/1 with LMG on cover or prone'
             ]
-            , description: 'Preprocessors like LESS and SASS help you write more structured and efficient CSS by adding features like variables, functions, and nesting.'
-			, stats: [
-				{
-					title: 'Charisma'
-					, value: 2
-				}
-				, {
-					title: 'Dexterity'
-					, value: 1
-				}
-			]
+            , description: 'Brining in the heavy fire power to lay suppresive fire.'			
 		},
 		{
 			id: 4
-			, title: 'Web Design Mastery'
-			, dependsOn: [2]
-            , description: 'You can bring design ideas to life by translating them into the requisite HTML document with CSS styles.'
-			, stats: [
-				{
-					title: 'Charisma'
-					, value: 10
-				}
+			, title: 'Assault Rifle Spec' // AR SPEC 4
+			, dependsOn: [1]
+			, maxPoints: 7
+			, rankDescriptions: [
+				'+1 attack rolls with rifles'
+				,'2 shots per turn'
+				,'+1/1 with rifles'
+				,'3 shots per turn'
+				,'+1/1 with rifles'
+				,'4 shots per turn'
+				,'+1/1 with rifles'
 			]
+            , description: 'Getting into the fray.'			
 		},
 		{
 			id: 5
-			, title: 'jQuery Effects'
-			, dependsOn: [4]
-            , links: [
-                {
-                    label: 'Codecademy jQuery'
-	                , url: 'http://www.codecademy.com/tracks/jquery'
-                }
-                , {
-                    label: 'jQuery Category: Manipulation'
-                    , url: 'http://api.jquery.com/category/manipulation/'
-                }
-                , {
-                    label: 'jQuery Category: Effects'
-                    , url: 'http://api.jquery.com/category/effects/'
-                }
-            ]
-			, maxPoints: 3
-            , rankDescriptions: [
-                'You are familiar with manipulating the document object model (DOM) - modifying values, content, properties, entire elements, etc.'
-                , 'You are familiar with adding standard animation to a web page.'
-                , 'You are familiar with creating and adding custom effects to a web page.'
-            ]
-            , description: 'jQuery provides techniques and methods for client-side manipulation of the web page elements.'
-			, talents: ['Sizzlin']
-			, stats: [
-				{
-					title: 'Charisma'
-					, value: 2
-				}
-				, {
-					title: 'Dexterity'
-					, value: 1
-				}
-			]
+			, title: 'Rail system' // Rail system 5
+			, dependsOn: [1]
+            , description: 'A Picatinny rail added to a weapon to add 1-2 weapon mods.'
 		},
 
 		{
 			id: 6
-			, title: 'Search Engine Optimization (SEO)'
+			, title: 'SMG Specialist' // SMG 6
 			, dependsOn: [1]
-            , links: [
-                {
-                    label: 'Search Engine Optimization (Google)'
-	                , url: 'https://support.google.com/webmasters/answer/35291'
-                }
-                , {
-                    label: 'Webmaster Tools (Google)'
-                    , url: 'http://www.google.com/webmasters/tools/'
-                }
-                , {
-                    label: 'Bing - Webmaster Tools'
-                    , url: 'http://www.bing.com/toolbox/webmaster'
-                }
-            ]
-            , description: 'The process of affecting the ranking/visibility of a website or web page in a search engines results.'
-			, stats: [
-				{
-					title: 'Intellect'
-					, value: 2
-				}
-				, {
-					title: 'Wisdom'
-					, value: 1
-				}
+			, maxPoints: 7
+			, rankDescriptions: [
+				'2 shots per turn'
+				,'+1/1 with SMGs'
+				,'3 shots per turn'
+				,'+1/1 with SMGs'
+				,'4 shots per turn'
+				,'+1/1 with SMGs'
+				,'5 shots per turn'
 			]
+            , description: 'Up close and personal.'
 		},
 		{
 			id: 7
-			, title: 'Analytics'
-			, dependsOn: [6]
-            , links: [
-                {
-                    label: '10 SEO Analysis Tools You Should Be Using'
-	                , url: 'http://www.webgnomes.org/blog/10-seo-analysis-tools/'
-                }
-                , {
-                    label: 'Configuring SEO data in Analytics (Google)'
-                    , url: 'https://support.google.com/analytics/answer/1308621?hl=en'
-                }
-                , {
-                    label: 'Using the SEO Reports (Google)'
-                    , url: 'http://www.bing.com/toolbox/webmaster'
-                }
-                , {
-                    label: 'Bing - SEO Analyzer'
-                    , url: 'http://www.bing.com/toolbox/seo-analyzer'
-                }
-            ]
-            , description: 'Analytics provide performance data about a website as well as information that is usable to measure the success of SEO.'
-			, stats: [
-				{
-					title: 'Intellect'
-					, value: 1
-				}
-				, {
-					title: 'Wisdom'
-					, value: 2
-				}
+			, title: 'DMR Specialist' // DMR 7
+			, dependsOn: [1]
+			, maxPoints: 2
+			, rankDescriptions: [
+				'+2 attack rolls with DMR'
+				,'2 shots per turn'
 			]
-			, talents: ['Crafty']
+            , description: 'Danger from a distance.'
 		},
 
 		{
 			id: 8
-			, title: 'Javascript'
-			, dependsOn: [1]
-            , links: [
-                {
-                    label: 'JavaScript Tutorial'
-	                , url: 'http://www.htmldog.com/guides/javascript/'
-                }
-                , {
-                    label: 'Codecademy JavaScript'
-                    , url: 'http://www.codecademy.com/tracks/javascript'
-                }
-                , {
-                    label: 'List of Videos for Beginner JavaScript'
-                    , url: 'http://thenewboston.org/list.php?cat=10'
-                }
-                , {
-                	label: 'Douglas Crockford on Javascript'
-                	, url: 'http://javascript.crockford.com/'
-                }
-            ]
-            , description: 'JavaScript is the dominant language for client-side programming.  It executes in the user&rsquo;s browser to manipulate the HTML document after it has loaded.  This may be as simple as showing hidden elements, or more advanced like contacting the server to load more data.'
-			, stats: [
-				{
-					title: 'Dexterity'
-					, value: 3
-				}
-			]
+			, title: 'Panther Chameleon Suit' // PC SUIT 8
+			, dependsOn: [2]
+            , description: 'Stealth increased by 2\n2 attack per turn\n+2 movement in stealth\ncannot be detected by IR/NV.'
 		},
 		{
 			id: 9
-			, title: 'JS Libraries & Frameworks'
-			, dependsOn: [8]
-			, maxPoints: 2
+			, title: 'Assassin 1' // ASS1 9
+			, dependsOn: [8]			
             , rankDescriptions: [
-                'You tap into libraries like jQuery, MooTools, Prototype, Dojo, and YUI to streamline your work.'
-                , 'You use frameworks like KnockoutJS, Ember.js, AngularJS, and Backbone.js to structure complex frontend functionality.'
+                '+1 with side arms'
             ]
-            , description: 'Once you&rsquo;re comfortable with the JavaScript language, there&rsquo;s a multitude of libraries and frameworks to accomplish common tasks and enhance your development.'
+            , description: 'Silent Death.'
 			, stats: [
 				{
-					title: 'Dexterity'
+					title: 'Athletics'
 					, value: 2
 				}
 				, {
-					title: 'Wisdom'
-					, value: 1
+					title: 'Acrobatics'
+					, value: 2
 				}
 			]
-			, talents: ['Nimble']
 		},
 		{
 			id: 10
